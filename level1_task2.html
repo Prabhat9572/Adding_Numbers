@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Tasks</title>
+<style>
+  #colorButton {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<center><button id="colorButton">Change Color</button></center>
+
+<script>
+  // Change color of the button when clicked
+  document.getElementById("colorButton").addEventListener("click", function() {
+    var button = document.getElementById("colorButton");
+    var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    button.style.backgroundColor = randomColor;
+  });
+
+  // Display greeting message based on current time
+  var time = new Date().getHours();
+  var greeting;
+  if (time < 12) {
+    greeting = "Good morning!";
+  } else if (time < 18) {
+    greeting = "Good afternoon!";
+  } else {
+    greeting = "Good evening!";
+  }
+  alert(greeting);
+
+  // Basic calculator that adds two numbers
+  var num1 = parseFloat(prompt("Enter the first number:"));
+  var num2 = parseFloat(prompt("Enter the second number:"));
+  var result = num1 + num2;
+  alert("The result of adding " + num1 + " and " + num2 + " is " + result);
+</script>
+
+</body>
+</html>
